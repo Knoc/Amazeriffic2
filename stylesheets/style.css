@@ -111,7 +111,7 @@ a:hover {
 	background: #eee;
 }
 
-.content ul {
+.content {
 	background: #eee;
 	padding: 10px;
 }
@@ -120,4 +120,17 @@ a:hover {
 	background: white;
 	margin: 10px;
 	padding: 5px;
+}
+
+.content input {
+	width: 550px;
+	height: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.content button {
+	width: 30px;
+	height: 35px;
 }
