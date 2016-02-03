@@ -23,7 +23,9 @@ var main = function (toDoObjects) {
 				});
 				$("main .content").append($content);
 			} else if ($element.parent().is(":nth-child(3)")) {
-				 var organizedByTag = organizedByTags(toDoObjects); /*[
+				 var organizedByTag = [];
+				 organizedByTag = organizedByTags(toDoObjects);
+				 console.log(organizedByTag); /*[
 					{
 						"name" : "покупки",
 						"toDos" : ["Купить продукты"]	
@@ -80,7 +82,7 @@ var organizedByTags = function (toDoObjects) {
 	});
 	var tagObjects = tags.map (function (tag){
 		var toDoWithTag = [];
-		toDoObjects.forEach (function (toDo){
+		toDoObjects.forEach (function (toDo) {
 			if (toDo.tags.indexOf(tag) !== -1) {
 				toDoWithTag.push(toDo.description);
 			}
@@ -88,4 +90,5 @@ var organizedByTags = function (toDoObjects) {
 		return { "name" : tag, "toDos" : toDoWithTag };
 	});
 	console.log(tagObjects);
-}
+	return tagObjects;
+};
